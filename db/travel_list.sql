@@ -8,10 +8,3 @@ CREATE TABLE cities (
  if_visited BOOLEAN,
  country_id INT8 REFERENCES country(id),
 );
-
-
-
-
-
-binding.pry
-nil

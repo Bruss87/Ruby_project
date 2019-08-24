@@ -5,73 +5,73 @@ require_relative('models/city')
 City.delete_all()
 
 city1 = City.new({
-  'name' = 'Bergen',
-  'if visited' = 'true',
-  'country_id'= 1
+  'name' => 'Bergen',
+  'if visited' => 'true',
+  'country_id'=> 1
   })
 
 city1.save
 
 city2 = City.new({
-  'name' = 'Oslo',
-  'if visited' = 'false',
-  'country_id'= 1
+  'name' => 'Oslo',
+  'if visited' => 'false',
+  'country_id'=> 1
   })
 
 city2.save
 
 city3 = City.new({
-  'name' = 'Stavanger',
-  'if visited' = 'true',
-  'country_id'= 1
+  'name' => 'Stavanger',
+  'if visited' => 'true',
+  'country_id' => 1
   })
 
 city3.save
 
 city4 = City.new({
-  'name' = 'Vienna',
-  'if visited' = 'true',
-  'country_id'= 2
+  'name' => 'Vienna',
+  'if visited' => 'true',
+  'country_id' => 2
   })
 
 city4.save
 
 city5 = City.new({
-  'name' = 'Salzburg',
-  'if visited' = 'false',
-  'country_id'= 2
+  'name' => 'Salzburg',
+  'if visited' => 'false',
+  'country_id' => 2
   })
 
 city5.save
 
 city6 = City.new({
-  'name' = 'Innsbruck',
-  'if visited' = 'false',
-  'country_id'= 2
+  'name' => 'Innsbruck',
+  'if visited' => 'false',
+  'country_id' => 2
   })
 
 city6.save
 
 city7 = City.new({
-  'name' = 'Porto',
-  'if visited' = 'true',
-  'country_id'= 3
+  'name' => 'Porto',
+  'if visited' => 'true',
+  'country_id' => 3
   })
 
 city7.save
 
 city8 = City.new({
-  'name' = 'Lisbon',
-  'if visited' = 'false',
-  'country_id'= 3
+  'name' => 'Lisbon',
+  'if visited' => 'false',
+  'country_id' => 3
   })
 
 city8.save
 
 city9 = City.new({
-  'name' = 'Faro',
-  'if visited' = 'false',
-  'country_id'= 3
+  'name' =>'Faro',
+  'if visited' => 'false',
+  'country_id' => 3
   })
 
 city9.save
@@ -98,7 +98,7 @@ city12 = City.new({
   'country_id' => 5
   })
 
-city12.save  
+city12.save
 
 city13 = City.new({
   'name' => 'Perak'
@@ -107,3 +107,8 @@ city13 = City.new({
   })
 
 city13.save
+
+
+
+binding.pry
+nil
