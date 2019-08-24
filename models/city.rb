@@ -1,4 +1,4 @@
-require_relative("../db/sql_runner")
+require_relative('../db/sql_runner')
 
 class City
 
@@ -25,8 +25,16 @@ def self.all
   cities.map{|city| City.new(city)}
 end
 
-def
-  
+def update()
+  sql = "
+  UPDATE cities
+  SET(name, if_visited, country_id) = ($1, $2, $3)
+  WHERE id = $4"
+  values = [@id, @name, @if_visited,
+    @country_id]
+  SqlRunner.run(sql, values)
+end
+
 end
 
 

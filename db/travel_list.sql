@@ -1,8 +1,6 @@
 DROP TABLE cities;
 
 
-City.delete_all()
-
 
 CREATE TABLE cities (
  id SERIAL8 PRIMARY KEY
