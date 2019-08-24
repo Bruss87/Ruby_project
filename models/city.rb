@@ -14,7 +14,8 @@ end
 
 def save()
   sql = "INSERT INTO cities (name, if_visited, country_id)
-  values = ($1, $2, $3) RETURNING id"
+  VALUES ($1, $2, $3) RETURNING id"
+  values = [@name, @if_visited, @country_id, ]
   city = SqlRunner.run(sql, values)
   @id = city[0]['id'].to_i
 end
@@ -24,6 +25,7 @@ def self.all
   cities = SqlRunner(sql)
   cities.map{|city| City.new(city)}
 end
+
 
 def update()
   sql = "
@@ -52,14 +54,10 @@ def self.find(id)
    return result
  end
 
-
-
-
-
-
-
-
-
+ def self.delete_all()
+    sql = "DELETE FROM cities"
+    SqlRunner.run(sql)
+  end
 
 
 end
