@@ -19,6 +19,16 @@ def save()
   @id = city[0]['id'].to_i
 end
 
+def self.all
+  sql = "SELECT * FROM cities"
+  cities = SqlRunner(sql)
+  cities.map{|city| City.new(city)}
+end
+
+def
+  
+end
+
 
 
 
