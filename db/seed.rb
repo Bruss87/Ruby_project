@@ -1,6 +1,6 @@
 require('pry')
-require_relative('models/city')
-require_relative('models/country')
+require_relative('../models/city')
+require_relative('../models/country')
 
 Country.delete_all()
 City.delete_all()
