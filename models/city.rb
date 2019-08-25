@@ -20,13 +20,6 @@ def save()
   @id = city[0]['id'].to_i
 end
 
-def self.all
-  sql = "SELECT * FROM cities"
-  cities = SqlRunner(sql)
-  cities.map{|city| City.new(city)}
-end
-
-
 def update()
   sql = "
   UPDATE cities
@@ -45,6 +38,12 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def self.all
+  sql = "SELECT * FROM cities"
+  cities = SqlRunner.run(sql)
+  cities.map{|city| City.new(city)}
+end
+
 def self.find(id)
    sql = "SELECT * FROM cities
    WHERE id = $1"
@@ -54,10 +53,10 @@ def self.find(id)
    return result
  end
 
- def self.delete_all()
+def self.delete_all()
     sql = "DELETE FROM cities"
     SqlRunner.run(sql)
-  end
+end
 
 
 end
