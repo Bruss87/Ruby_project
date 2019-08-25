@@ -17,5 +17,9 @@ class TestCountry < MiniTest::Test
     assert_equal('Norway', result)
   end
 
+  def test_continent()
+    result = @country.continent()
+    assert_equal('Europe', result)
+  end
 
 end
