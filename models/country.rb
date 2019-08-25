@@ -34,7 +34,16 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
-def self.all
+def cities()
+  sql = "SELECT * FROM cities
+  WHERE country_id= $1"
+  values = [@id]
+  cities = SqlRunner.run(sql, values)
+  result = cities.map{|city| City.new(city)}
+  return result
+end
+
+def self.all()
   sql = "SELECT * FROM countries"
   countries = SqlRunner.run(sql)
   countries.map{|city| City.new(city)}

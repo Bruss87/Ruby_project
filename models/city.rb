@@ -38,6 +38,16 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def countries()
+  sql = "SELECT * FROM countries
+  WHERE id =$1"
+  values = [@country_id]
+  country = SqlRunner.run(sql, values)
+  result = Country.new(country.first)
+  return result
+end
+
+
 def self.all
   sql = "SELECT * FROM cities"
   cities = SqlRunner.run(sql)
