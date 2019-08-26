@@ -1,9 +1,16 @@
 <h1>Countries</h1>
 
 <ul>
-  <% for country in @countries %>
+  <% @countries.each do |country| %>
   <li>
     <p><%= country.name %> </p>
+    <ol>
+      <% country.cities.each do |city| %>
+      <li>
+        <p><%= city.name %></p>
+      </li>
+      <% end %>
+    </ol>
   </li>
-   <% end %>
+  <% end %>
 </ul>

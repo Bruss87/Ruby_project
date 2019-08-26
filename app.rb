@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('controllers/cities_controller')
 require_relative('controllers/countries_controller')
+also_reload('../controllers/*')
 also_reload('../models/*')
 
 get '/' do
