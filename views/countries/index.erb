@@ -3,14 +3,8 @@
 <ul>
   <% @countries.each do |country| %>
   <li>
-    <p><%= country.name %> </p>
-    <ol>
-      <% country.cities.each do |city| %>
-      <li>
-        <p><%= city.name %></p>
-      </li>
-      <% end %>
-    </ol>
+  <a href="/countries/<%= country.id %>"> <%= country.name %> </a>
   </li>
   <% end %>
 </ul>
+<a href="/countries/new"><input type="submit" value="Add new country"></a>

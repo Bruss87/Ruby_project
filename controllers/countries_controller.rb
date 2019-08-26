@@ -11,20 +11,34 @@ get '/countries' do #index
   erb (:"countries/index")
 end
 
+get '/countries/new' do #new
+  erb (:"countries/new")
+end
+
+post '/countries' do #create
+  country = Country.new(params)
+  country.save
+  redirect to '/countries'
+end
+
 get '/countries/:id' do #show
   @country = Country.find(params[:id])
-  erb (:show)
+  erb(:"countries/show")
 end
-#new
-get '/countries/new' do
-  erb (:new)
-end
-#create
-post 'countries/' do
-  erb
-end
-#update
 
-#edit
+get '/countries/:id/edit' do #edit
+  @country = Country.find(params[:id])
+  erb(:"countries/edit")
+end
 
-#delete
+post '/countries/:id' do #update
+  country = Country.new(params)
+  country.update
+  redirect to "/countries/#{params['id']}"
+end
+
+post '/countries/:id/delete' do # delete
+  country = Country.find(params[:id])
+  country.delete()
+  redirect to '/countries'
+end
