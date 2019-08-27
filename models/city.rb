@@ -47,7 +47,6 @@ def countries()
   return result
 end
 
-
 def self.all
   sql = "SELECT * FROM cities"
   cities = SqlRunner.run(sql)

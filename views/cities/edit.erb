@@ -1,0 +1,27 @@
+<form method="post" action="/cities/<%= @city.id %>">
+  <label for="name-field">City Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @city.name %>"
+  />
+
+  <label for="if-visited-field">Have you been there:</label>
+  <input
+  type="text"
+  name="if_visited"
+  id="if-visited-field"
+  value="<%= @city.if_visited %>"
+  />
+
+  <label for="country-field">Country:</label>
+  <input
+  type="text"
+  name="country_id"
+  id="country_field"
+  value="<%= @city.country_id %>"
+  />
+
+  <input type='submit' value="Update">
+</form>

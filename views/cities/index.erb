@@ -1,0 +1,9 @@
+<h1>Cities</h1>
+<ul>
+  <% @cities.each do |city| %>
+  <li>
+  <a href="/cities/<%= city.id %>"> <%= city.name %> </a>
+  </li>
+  <% end %>
+</ul>
+<a href="/cities/new"><input type="submit" value="Add new city"></a> 

@@ -1,0 +1,7 @@
+<h1><%= @city.name %></h1
+<h2>Visited:<% if @city.if_visited == true p "Yes" else p "No" %> <%= @city.if_visited %></h2><% end %>
+
+
+<p><a href="/cities/<%= @city.id %>/edit"><input type="submit" value="Edit City"></a></p>
+
+<p><input type="submit" value="Delete City"/></p>

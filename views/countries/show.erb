@@ -1,5 +1,6 @@
 <h1><%= @country.continent %></h1>
 <h2><%= @country.name %></h2
+
 <ul>
   <% @country.cities.each do |city| %>
   <li>
@@ -7,7 +8,9 @@
   </li>
   <% end %>
 </ul>
-<p><a href="/countries/<%= @country.id %>/edit">Edit Country</a></p>
+<a href="/countries/<%= @country.id %>/edit"><input type="submit" value="Edit Country"></a>
+
+
 <form method="post" action="/countries/<%= @country.id %>/delete">
   <input type="submit" value="Delete Country"/>
 </form>
