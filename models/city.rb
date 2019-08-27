@@ -7,7 +7,7 @@ attr_reader :name, :country_id, :id
 
 def initialize(options)
   @name = options['name']
-  @if_visited = options['if_visited']
+  @if_visited = options['if_visited'] == 't'
   @country_id = options['country_id'].to_i
   @id = options['id'].to_i if options['id']
 end
@@ -25,8 +25,8 @@ def update()
   UPDATE cities
   SET(name, if_visited, country_id) = ($1, $2, $3)
   WHERE id = $4"
-  values = [@id, @name, @if_visited,
-    @country_id]
+  values = [@name, @if_visited,
+    @country_id, @id]
   SqlRunner.run(sql, values)
 end
 
@@ -38,7 +38,7 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
-def countries()
+def country()
   sql = "SELECT * FROM countries
   WHERE id =$1"
   values = [@country_id]

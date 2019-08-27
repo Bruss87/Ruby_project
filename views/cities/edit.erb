@@ -1,4 +1,7 @@
 <form method="post" action="/cities/<%= @city.id %>">
+
+  <input type="hidden" name="country_id" value="<%= @city.country_id %>">
+
   <label for="name-field">City Name:</label>
   <input
   type="text"
@@ -15,13 +18,12 @@
   value="<%= @city.if_visited %>"
   />
 
-  <label for="country-field">Country:</label>
-  <input
-  type="text"
-  name="country_id"
-  id="country_field"
-  value="<%= @city.country_id %>"
-  />
+  <label>
+    Have you been there?
+      <select name="if_visited">
+        <option value="<%= @city.if_visited %>"></option>
+      </select>
+    </label>
 
   <input type='submit' value="Update">
 </form>

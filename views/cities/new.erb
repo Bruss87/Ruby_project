@@ -1,6 +1,6 @@
 <h1>Add new city to your list</h1>
 
-<form method="post" action="/city">
+<form method="post" action="/cities">
   <label for="name">City Name:</label>
   <input
   type="text"
@@ -15,12 +15,14 @@
   id="if_visited-field"
   />
 
-  <label for="country_id">Country</label>
-  <input
-  type="text"
-  name="country_id"
-  id="country_id-field"
-  />
+  <label>
+    Select a country:
+      <select name="country_id">
+        <% for country in @countries %>
+        <option value="<%= country.id %>"><%= country.name %></option>
+        <% end %>
+      </select>
+    </label>
 
   <input type="submit" value="add city">
 </form>

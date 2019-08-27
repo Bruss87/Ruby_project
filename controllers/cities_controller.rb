@@ -12,6 +12,8 @@ get '/cities' do #index
 end
 
 get '/cities/new' do #new
+  @cities = City.all
+  @countries = Country.all
   erb (:"cities/new")
 end
 

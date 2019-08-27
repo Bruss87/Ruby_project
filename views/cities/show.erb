@@ -1,7 +1,9 @@
-<h1><%= @city.name %></h1
-<h2>Visited:<% if @city.if_visited == true p "Yes" else p "No" %> <%= @city.if_visited %></h2><% end %>
-
+<h1><%= @city.country.name %> </h1>
+<h2><%= @city.name %></h2>
+<h3> Visited: <%= @city.if_visited ? "Yes" : "No" %></h3>
 
 <p><a href="/cities/<%= @city.id %>/edit"><input type="submit" value="Edit City"></a></p>
 
+<form method="post" action="/cities/<%= @city.id %>/delete">
 <p><input type="submit" value="Delete City"/></p>
+</form>
