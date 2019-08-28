@@ -1,3 +1,4 @@
+<div class="city-details">
 <h1><%= @city.country.name %> </h1>
 <h2><%= @city.name %></h2>
 <h3> Visited: <%= @city.if_visited ? "Yes" : "No" %></h3>
@@ -7,3 +8,4 @@
 <form method="post" action="/cities/<%= @city.id %>/delete">
 <p><input type="submit" value="Delete City"/></p>
 </form>
+</div>

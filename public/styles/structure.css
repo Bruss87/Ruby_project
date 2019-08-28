@@ -1,0 +1,80 @@
+
+body {
+  background: black url('/images/background3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #253C78;
+  font-family: 'Comic Sans MS', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #253C78;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #253C78;
+}
+
+
+a, a:link {
+  font-size: 1.5em;
+  color: #068D9D;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover, a:visited, a:active, a:focus {
+  color: #FFDD4A;
+}
+.countries-list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.countries-list ul {
+  height: 45px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.countries-list li {
+  list-style-type: none;
+}
+.country-details {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.country-details ul {
+  height: 45px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.country-details li {
+  list-style-type: none;
+}
+.home-page {
+  text-align: center;
+
+}
+
+.city-details {
+
+}

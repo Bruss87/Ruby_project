@@ -2,17 +2,22 @@
 <html>
 <head>
   <title>Your travel bucket list</title>
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
 </head>
 <body>
   <nav>
-  <ul>
-    <li>
+   <ul>
+     <li>
+       <a href="/">Home</a>
+     </li>
+     <li>
       <a href="/countries">Countries</a>
-    </li>
-    <li>
-      <a href="/cities">Cities</a>
-  </ul>
-</nav>
+      </li>
+      <li>
+       <a href="/cities">Cities</a>
+      </li>
+   </ul>
+  </nav>
   <%= yield %>
 </body>
 </html>

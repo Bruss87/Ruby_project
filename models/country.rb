@@ -23,7 +23,7 @@ def update()
   SET (name, continent) =
   ($1, $2)
   WHERE id = $3"
-  values = [@id, @name, @continent]
+  values = [@name, @continent, @id]
   SqlRunner.run(sql, values)
 end
 
