@@ -1,9 +1,14 @@
 <div class="city-details">
-<h1><%= @city.country.name %> </h1>
+<h2><a href="/countries/<%= @city.country_id %>"><%= @city.country.name %></a></h2>
+
 <h2><%= @city.name %></h2>
+
+<p><img src="<%= @city.image %>"></p>
+
 <h3> Have you been there?: <%= @city.if_visited ? "Yes" : "No" %></h3>
 
 <p><a href="/cities/<%= @city.id %>/edit"><input type="submit" value="Edit City"></a></p>
+
 
 <form method="post" action="/cities/<%= @city.id %>/delete">
 <p><input type="submit" value="Delete City"/></p>

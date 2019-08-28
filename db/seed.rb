@@ -44,7 +44,8 @@ country5.save
 city1 = City.new({
   'name' => 'Bergen',
   'if_visited' => true,
-  'country_id'=> country1.id
+  'country_id'=> country1.id,
+  'image' => '/images/bergen-brygge-2.jpg'
   })
 
 city1.save
