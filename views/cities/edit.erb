@@ -10,12 +10,20 @@
   value="<%= @city.name %>"
   />
 
-  <label for="if-visited-field">Have you been there:</label>
+  <label for="if-visited-field">Have you been there?:</label>
   <input
   type="text"
   name="if_visited"
   id="if-visited-field"
   value="<%= @city.if_visited %>"
+  />
+
+  <label for="image-field">Change photo:</label>
+  <input
+  type="text"
+  name="image"
+  id="image-field"
+  value="<%= @city.image %>"
   />
 
   <input type='submit' value="Update">
