@@ -36,6 +36,18 @@ a, a:link {
 a:hover, a:visited, a:active, a:focus {
   color: #FFDD4A;
 }
+
+nav {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  list-style-type: none;
+}
+
 .countries-list {
   display: flex;
   flex-flow: column;
@@ -70,11 +82,40 @@ a:hover, a:visited, a:active, a:focus {
 .country-details li {
   list-style-type: none;
 }
+
+.cities-list{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.cities-list ul{
+  height: 150px;
+  width: 950px;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-evenly;
+  justify-content: space-between;
+}
+.cities-list li {
+  list-style-type: none;
+  padding: inherit;
+}
+.city-details {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 .home-page {
   text-align: center;
-
 }
-
-.city-details {
-
+.home-page ul{
+  height: 500px;
+  width: 1200px;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-evenly;
+  justify-content:space-between;
+}
+.home-page li {
+    list-style-type: none;
 }
