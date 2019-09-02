@@ -141,11 +141,12 @@ input[type=submit] {
 }
 .home-page ul{
   height: 500px;
-  width: 1100px;
+  width: 1200px;
   display: flex;
   flex-flow: wrap;
   align-content: space-evenly;
   justify-content:space-between;
+  padding: 40px 40px;
 }
 .home-page li {
     list-style-type: none;
@@ -154,13 +155,11 @@ input[type=submit] {
 .centered{
  position: absolute;
  top: 50%;
- left: 22%;
- transform: translate(-50%, -50%);
+ left: 15%;
 }
 
 .centered2{
  position: absolute;
  top: 50%;
- left: 70%;
- transform: translate(-50%, -50%);
+ right: 17%;
 }

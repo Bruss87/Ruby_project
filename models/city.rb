@@ -51,7 +51,8 @@ end
 def self.all
   sql = "SELECT * FROM cities"
   cities = SqlRunner.run(sql)
-  cities.map{|city| City.new(city)}
+  result = cities.map{|city| City.new(city)}
+  return result.sort_by{|city| city.name}
 end
 
 def self.find(id)

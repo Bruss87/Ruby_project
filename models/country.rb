@@ -46,7 +46,8 @@ end
 def self.all()
   sql = "SELECT * FROM countries"
   countries = SqlRunner.run(sql)
-  countries.map{|country| Country.new(country)}
+  result = countries.map{|country| Country.new(country)}
+  return result.sort_by{|country| country.name}
 end
 
 def self.find(id)
