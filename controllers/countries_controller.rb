@@ -1,9 +1,8 @@
 require('sinatra')
-require('sinatra/contrib/all')
-require('pry-byebug')
+require('sinatra/contrib/all')if development?
 require_relative('../models/city.rb')
 require_relative('../models/country.rb')
-also_reload('../models/*')
+
 
 get '/countries' do #index
   @countries = Country.all()

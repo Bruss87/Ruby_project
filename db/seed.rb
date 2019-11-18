@@ -1,4 +1,3 @@
-require('pry')
 require_relative('../models/city')
 require_relative('../models/country')
 
@@ -157,8 +156,3 @@ city13 = City.new({
   })
 
 city13.save
-
-
-
-binding.pry
-nil
